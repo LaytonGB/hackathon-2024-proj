@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon2024", "Hackathon2024.csproj", "{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B98DAA9D-8555-4C6D-9D3A-4A35381368DB}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
