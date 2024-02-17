@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Hackathon2024"
 run/main_scene="res://mobile_test/test_world.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]

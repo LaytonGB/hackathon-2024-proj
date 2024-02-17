@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0p5d60lefc8a"]
+
+[ext_resource type="PackedScene" uid="uid://b0ercjne71p5p" path="res://assets/test_level.glb" id="1_pmh4p"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="test_level" parent="." instance=ExtResource("1_pmh4p")]
+
+[editable path="test_level"]
