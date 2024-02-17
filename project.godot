@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Hackathon2024"
+run/main_scene="res://mobile_test/test_world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Hackathon2024"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
