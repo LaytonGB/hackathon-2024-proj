@@ -53,7 +53,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(0.653407, 0.267743, -0.708076, 0.757006, -0.231102, 0.611174, -3.30898e-08, -0.935364, -0.353687, -2.61692, 2.32239, -3.44741)
 projection = 1
-size = 4.58435
+size = 7.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MotionPath/PathFollow3D/Player"]
 mesh = SubResource("SphereMesh_3uro8")
