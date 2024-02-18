@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b12jxfs6wjdyv"]
+[gd_scene load_steps=9 format=3 uid="uid://b12jxfs6wjdyv"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_kkdp7"]
+[ext_resource type="PackedScene" uid="uid://dolks72xivbu" path="res://assets/paxton.glb" id="2_kgfwj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ywfdh"]
 size = Vector3(2, 4, 2)
@@ -31,12 +32,6 @@ one_shot = true
 transform = Transform3D(-0.752886, 0.415454, -0.510451, 1.03678e-08, 0.775584, 0.631244, 0.658151, 0.475255, -0.583926, -3.3161, 12.8974, -3.4008)
 projection = 1
 size = 27.126
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(-0.894724, -0.20962, 0.394371, 0, 0.883013, 0.469348, -0.44662, 0.419937, -0.790053, 17.4676, 24.0578, -7.1506)
-light_energy = 20.0
-spot_range = 60.0
-spot_angle = 62.2605
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, 1)
@@ -74,5 +69,15 @@ material = SubResource("StandardMaterial3D_vytsu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, 15)
 size = Vector3(4, 0.5, 2)
 material = SubResource("StandardMaterial3D_ib0i4")
+
+[node name="paxton" parent="." instance=ExtResource("2_kgfwj")]
+transform = Transform3D(-4.92852e-08, 0, 1.12751, 0, 1.12751, 0, -1.12751, 0, -4.92852e-08, 16.0189, -2.85396, -7.03545)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.808791, 0.347209, -0.474661, 0, 0.807115, 0.590394, 0.588096, 0.477506, -0.652787, 0, 12.1957, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.631093, 0.0638616, -0.773074, -0.124951, 0.99196, -0.0200597, 0.765577, 0.109256, 0.633999, 0, 6.03706, 18.3038)
+light_energy = 0.3
 
 [connection signal="timeout" from="MoveTimer" to="CharacterBody3D" method="_on_move_timer_timeout"]

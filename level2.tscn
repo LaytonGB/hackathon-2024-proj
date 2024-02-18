@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://j23rri1cgjta"]
+[gd_scene load_steps=10 format=3 uid="uid://j23rri1cgjta"]
 
 [ext_resource type="Script" path="res://level2.gd" id="1_dd4fq"]
 [ext_resource type="Script" path="res://PathFollow3D.gd" id="2_t7nf2"]
+[ext_resource type="PackedScene" uid="uid://dolks72xivbu" path="res://assets/paxton.glb" id="3_j8ex4"]
 
 [sub_resource type="Curve3D" id="Curve3D_vh1fr"]
 _data = {
@@ -32,7 +33,8 @@ albedo_color = Color(1, 0, 0, 1)
 script = ExtResource("1_dd4fq")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.928151, 0.0770668, -0.364138, -0.0591275, 0.935377, 0.348675, 0.367478, 0.345153, -0.863614, 0.489906, 3.96405, -5.79785)
+transform = Transform3D(-0.59518, -0.313446, 0.739941, -0.0591275, 0.935377, 0.348674, -0.801415, 0.163773, -0.575251, 14.4899, 3.96405, -7.79785)
+light_energy = 0.3
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.929551, -0.139998, 0.341079, 0, 0.925104, 0.379714, -0.368692, -0.352964, 0.859932, 6.50967, 3.96405, 0)
@@ -51,7 +53,7 @@ unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="MotionPath/PathFollow3D/Player"]
 unique_name_in_owner = true
-transform = Transform3D(0.653407, 0.267743, -0.708076, 0.757006, -0.231102, 0.611174, -3.30898e-08, -0.935364, -0.353687, -2.61692, 2.32239, -3.44741)
+transform = Transform3D(0.653407, 0.267743, -0.708076, 0.757006, -0.231102, 0.611174, 2.98023e-08, -0.935364, -0.353687, -2.61692, 2.32239, -3.44741)
 projection = 1
 size = 7.5
 
@@ -85,3 +87,6 @@ material = SubResource("StandardMaterial3D_d525m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34209, -4.76837e-07, -8.92004)
 size = Vector3(1, 0.5, 1)
 material = SubResource("StandardMaterial3D_qqmcn")
+
+[node name="paxton" parent="." instance=ExtResource("3_j8ex4")]
+transform = Transform3D(-2.16777e-08, 0, -0.495928, 0, 0.495928, 0, 0.495928, 0, -2.16777e-08, -2.81916, -2.85396, 1.71481)

@@ -7,7 +7,7 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# cam setup
-	camera.position = %Player.position + Vector3(2, 2, 5)
+	camera.position = %Player.position + Vector3(5, 2, 5)
 	camera.look_at(%Player.position)
 
 
