@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://b12jxfs6wjdyv"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_kkdp7"]
+[ext_resource type="PackedScene" uid="uid://b0ercjne71p5p" path="res://assets/test_level.glb" id="1_pmh4p"]
+[ext_resource type="ArrayMesh" uid="uid://fktvno5gvlky" path="res://assets/player_block.tres" id="3_mg61i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ywfdh"]
+size = Vector3(2, 4, 2)
+
+[node name="Level1" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, 1)
+script = ExtResource("1_kkdp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, 1)
+shape = SubResource("BoxShape3D_ywfdh")
+
+[node name="test_level" parent="CharacterBody3D" instance=ExtResource("1_pmh4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -11, -1)
+
+[node name="Cube" parent="CharacterBody3D/test_level" index="0"]
+mesh = ExtResource("3_mg61i")
+
+[node name="Plane" parent="CharacterBody3D/test_level" index="1"]
+visible = false
+
+[node name="Plane_001" parent="CharacterBody3D/test_level" index="2"]
+transform = Transform3D(0, -1, -8.74228e-07, -10, 0, 0, 0, 8.74228e-08, -10, 20, 10, 10)
+visible = false
+
+[node name="Plane_002" parent="CharacterBody3D/test_level" index="3"]
+transform = Transform3D(-1.19209e-06, -3.17865e-08, 10, -10, 0, -1.19209e-06, -1.04216e-13, -1, -3.17865e-07, 10, 10, 20)
+visible = false
+
+[node name="Cube_001" parent="CharacterBody3D/test_level" index="4"]
+visible = false
+
+[node name="Cube_002" parent="CharacterBody3D/test_level" index="5"]
+visible = false
+
+[node name="Cube_003" parent="CharacterBody3D/test_level" index="6"]
+visible = false
+
+[node name="Cube_004" parent="CharacterBody3D/test_level" index="7"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 8, 0)
+depth = 0.6
+polygon = PackedVector2Array(2, 6, 2, 0, 0, 0, 0, 8, 8, 8, 8, 16, 12, 16, 12, 6)
+
+[node name="GroundDetector" type="RayCast3D" parent="StaticBody3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, 1)
+collision_mask = 2
+
+[node name="test_level" parent="StaticBody3D" instance=ExtResource("1_pmh4p")]
+
+[node name="Cube" parent="StaticBody3D/test_level" index="0"]
+visible = false
+
+[node name="Plane_001" parent="StaticBody3D/test_level" index="2"]
+transform = Transform3D(0, -1, 8.74228e-07, -10, 0, 0, 0, -8.74228e-08, -10, 20, 10, 10)
+
+[node name="Plane_002" parent="StaticBody3D/test_level" index="3"]
+transform = Transform3D(-1.19209e-06, -2.06632e-07, 10, -10, 0, -1.19209e-06, 1.04216e-13, -1, -2.06632e-06, 10, 10, 20)
+
+[editable path="CharacterBody3D/test_level"]
+[editable path="StaticBody3D/test_level"]

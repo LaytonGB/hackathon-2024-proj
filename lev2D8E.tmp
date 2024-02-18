@@ -74,5 +74,3 @@ material = SubResource("StandardMaterial3D_vytsu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, 15)
 size = Vector3(4, 0.5, 2)
 material = SubResource("StandardMaterial3D_ib0i4")
-
-[connection signal="timeout" from="MoveTimer" to="CharacterBody3D" method="_on_move_timer_timeout"]
