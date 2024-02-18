@@ -48,7 +48,9 @@ func _input(event):
 			clicks_counter += 1
 			if OS.has_feature("web"):
 				JavaScriptBridge.eval("""
-					window.open("https://www.google.com", "_blank").focus();
+					document.open();
+					document.write('<h1>Success</h1>');
+					document.close();
 				""")
 
 
